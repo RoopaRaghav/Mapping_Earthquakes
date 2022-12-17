@@ -14,4 +14,10 @@ The earthquake data is represented on the maps in relation to the tectonic plate
 To interact with the maps API the user have to visit [mapbox.com](https://www.mapbox.com/), create a Mapbox account and retrieve the access token.
 
 ### Link to Interactive Maps webpage
-The deployed webpage is accessible at 
+The deployed webpage is accessible at  https://rooparaghav.github.io/Mapping_Earthquakes/
+
+### Screenshots all deliverables.
+
+![Screenshot1](https://user-images.githubusercontent.com/111100908/208226609-867cc5b1-fae8-48ca-bafd-01361c8227d3.png)
+![Screenshot2](https://user-images.githubusercontent.com/111100908/208226612-acb7bdaa-4136-4385-9ddd-d9b7a0507ab1.png)
+![Screenshot3](https://user-images.githubusercontent.com/111100908/208226613-5a75eab1-1a80-4b46-9ef2-067af7c7b498.png)
