@@ -30,8 +30,8 @@ let baseMaps = {
 
 // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
-    center: [30, 30],
-    zoom: 2,
+    center:[43.7, -79.3],
+    zoom: 11,
     layers: [satelliteStreets] //default layer
 })
 
@@ -44,16 +44,18 @@ L.control.layers(baseMaps).addTo(map);
 
 function onEachFeature(feature, layer) {
   // does this feature have a property named popupContent?
-  //console.log(feature);
+  console.log(feature);
   
-  if (feature.properties.airline && feature.properties.dst) {
-      layer.bindPopup("<h2>" + "Airport Code: "+ feature.properties.airline + "</h2> <hr> <h4> "+ "Destination: "+feature.properties.dst + "</h4>");
+  if (feature.properties.AREA_S_CD && feature.properties.AREA_NAME) {
+      layer.bindPopup("<h4> "+ "Neighbourhood Name: "+feature.properties.AREA_NAME + "</h4>");
   }
 }
 
 let myStyle = {
-  color: "#ffffa1",
-  weight: 2
+  color: "blue",
+  weight: 1,
+  fillOpacity: 0.7,
+  fillColor: "lightyellow",
 }
 
 // // Grabbing our GeoJSON data.
@@ -63,7 +65,7 @@ d3.json(torontoHoods).then(function(data) {
 L.geoJSON(data,{
   onEachFeature: onEachFeature,
   // color:"lightyellow",
-  // weight: 1
+  // weight: 2
   style: myStyle
 
 }).addTo(map);
