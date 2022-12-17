@@ -2,7 +2,7 @@
 // map = L.map('mapid').setView([30, 30], 2);
 
 // Accessing the Toronto airline routes GeoJSON URL.
-let torontoHoods = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+let earthquakeData = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 
 
@@ -139,7 +139,7 @@ let overlays = {
 L.control.layers(baseMaps, overlays).addTo(map);
 
 // // Grabbing our GeoJSON data.
-d3.json(torontoHoods).then(function(data) {
+d3.json(earthquakeData).then(function(data) {
   console.log(data);
 // Creating a GeoJSON layer with the retrieved data.
 L.geoJson(data, { 
